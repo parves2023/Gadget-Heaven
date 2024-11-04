@@ -1,28 +1,29 @@
-import { Link } from "react-router-dom";
+import bannerImg from "../assets/banner.jpg";
 
 function Hero() {
   return (
-    <div className="container mx-auto">
-      <section className="bg-gray-200 my-5 rounded-lg dark:bg-gray-900">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-            Books for Your Needs, Books for Your Journey
+    <div className="container mx-auto bg-[#9538E2] text-white rounded-b-2xl relative md:mb-[30rem] mb-[18rem]">
+      <div className="hero">
+        <div className="hero-content text-center">
+          <div className="mt-10 mb-44">
+            <h1 className="md:text-5xl text-4xl md:w-10/12 mx-auto font-bold">
+              Upgrade Your Tech Accessorize with Gadget Heaven Accessories
             </h1>
-            
-            <Link className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 btn btn-success" to={"listed-book"}>
-              View The List
-            </Link>
-          </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img
-              src="https://i.ibb.co/kQCYwfm/stack-colorful-books-eyeglasses-top-backlit-vibrant-light-knowledge-education-concept-327720429.webp"
-              alt="mockup"
-              className="rounded"
-            />
+            <p className="py-6 w-8/12 mx-auto">
+              Explore the latest gadgets that will take your experience to the
+              next level. From smart devices to the coolest accessories, we have
+              it all!
+            </p>
+            <button className="btn rounded-3xl px-7 py-1 text-[#9538E2]">
+              Shop Now
+            </button>
           </div>
         </div>
-      </section>
+      </div>
+      {/* meta glass */}
+      <div className="absolute w-full md:w-9/12  bg-white bg-opacity-50 border-2 border-stone-100 rounded-2xl p-4 left-1/2 transform -translate-x-1/2 md:-bottom-[27rem] -bottom-[15rem]">
+        <img className="rounded-2xl md:h-[35rem] h-[22rem]  w-full" src={bannerImg} alt="bannerImg" />
+      </div>
     </div>
   );
 }

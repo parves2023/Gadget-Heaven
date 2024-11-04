@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  overflow-y: scroll;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: #F7F7F7;
+}
+
+#root {
+  margin: 0 auto;
+}
+/* 
+.active{
+  font-weight: 800;
+  background-color: transparent !important;
+  text-decoration: underline;
+  color: rgb(162, 162, 162) !important;
+} */
+
