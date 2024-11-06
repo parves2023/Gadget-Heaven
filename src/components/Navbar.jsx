@@ -4,7 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 
 
-const Navbar = ({cart}) => {
+const Navbar = ({cart,wishList}) => {
 
   const location = useLocation();
 
@@ -96,7 +96,15 @@ const Navbar = ({cart}) => {
             }`}
           >
             <Link to="/Dashboard">
+
+              <div className="relative">
               <FaRegHeart />
+              <div className="absolute -top-4 -right-4 bg-yellow-400 font-semibold text-gray-700 size-5  rounded-full flex  items-center justify-center">
+              
+              {wishList.length}
+              </div>
+              </div>
+
             </Link>
           </div>
         </div>

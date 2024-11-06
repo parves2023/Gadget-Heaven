@@ -60,7 +60,7 @@ const MainLayout = () => {
   return (
     <div>
       <ToastContainer />
-      <Navbar cart={cart} />
+      <Navbar wishList={wishList} cart={cart} />
       <Outlet context={{ cart, setCart, addToCart, handleAddToWishList, wishList, setWishList, removeFromWishList }} />
       <Footer />
     </div>
