@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 import {
   ComposedChart,
@@ -12,18 +12,19 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from 'recharts';
+} from "recharts";
 
 const Statistics = () => {
   const location = useLocation();
-  const pathnameWithoutSlash = location.pathname.startsWith('/') ? location.pathname.slice(1) : location.pathname;
-
+  const pathnameWithoutSlash = location.pathname.startsWith("/")
+    ? location.pathname.slice(1)
+    : location.pathname;
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
     // Fetch data from gadget.json
-    fetch('./gadgets.json')
+    fetch("./gadgets.json")
       .then((response) => response.json())
       .then((jsonData) => {
         const chartData = jsonData.map((item) => ({
@@ -32,12 +33,12 @@ const Statistics = () => {
         }));
         setData(chartData);
       })
-      .catch((error) => console.error('Error fetching gadget data:', error));
+      .catch((error) => console.error("Error fetching gadget data:", error));
   }, []);
 
   return (
     <div>
-       <Helmet>
+      <Helmet>
         <title>Gadgets | {pathnameWithoutSlash} </title>
       </Helmet>
       <div className="mx-auto bg-[#9538E2] space-y-8">
@@ -45,9 +46,9 @@ const Statistics = () => {
         <div className="text-white py-8 text-center rounded-lg">
           <h1 className="text-3xl font-bold">Statistics</h1>
           <p className="mt-2">
-            Explore the latest gadgets that will take your experience to the
-            next level. From smart devices to the coolest accessories, we have
-            it all!
+            Dive into the numbers! View insights and data on recent trends,
+            performance metrics, and analytics to help you understand the bigger
+            picture.
           </p>
         </div>
       </div>
